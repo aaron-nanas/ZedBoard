@@ -1,0 +1,256 @@
+/*
+ * Aaron Joseph Nanas
+ * ECE 520
+ * Lab 1: GPIO
+ * Professor Mirzaei
+ */
+
+#include <stdio.h>
+#include "platform.h"
+#include "xgpio.h"
+#include "xparameters.h"
+#include "xil_printf.h"
+
+#define led_Delay 10000000
+#define printf xil_printf
+#define INITIAL_LED 0
+#define PORT_LED 1	// GPIO port for the LEDs
+#define PORT_SW 2	// GPIO port for the switches
+
+int track_Num = 0; // A variable to keep track of LED output
+
+// Turning all LEDs on (SW: 0001)
+void ledsOn (int *outputLED) {
+	*outputLED = 255;
+}
+
+// Turning all LEDs off (SW: 0010)
+void ledsOff (int *outputLED) {
+	*outputLED = 0;
+}
+
+// Binary Counter (SW: 0011)
+void binaryCounter (int *outputLED) {
+	*outputLED = track_Num;
+
+	if (track_Num >= 255) {
+		track_Num = 0;
+	}
+
+	else track_Num += 1;
+}
+
+// Ring Counter (SW: 0100)
+void ringCounter (int *outputLED) {
+	*outputLED = track_Num;
+		if (track_Num >= 255)
+		{
+			track_Num = 0;
+		}
+
+		else if (track_Num >= 1)
+		{
+			track_Num *= 2;
+		}
+
+		else track_Num = 1;
+}
+
+// Fibonacci Counter (SW: 0101)
+void fibonacciCounter (int *outputLED, int *NUM_1, int *NUM_2) {
+	*outputLED = *NUM_1 + *NUM_2;
+	*NUM_1 = *NUM_2;
+	*NUM_2 = *outputLED;
+	if (*outputLED == 233)
+	{
+		*NUM_1 = 0;
+		*NUM_2 = 1;
+	}
+}
+
+// Switching between all LEDS ON and OFF (SW: 0110)
+void ledsOnOff (int *outputLED) {
+
+	switch(*outputLED) {
+	case 0:
+		track_Num = 255;
+	break;
+
+
+	case 255:
+		track_Num = 0;
+	break;
+
+	default:
+		track_Num = 0;
+	}
+	*outputLED = track_Num;
+}
+// Gray Code Counter (SW: 0111)
+void grayCounter (int *outputLED) {
+	*outputLED = track_Num ^ (track_Num >> 1);
+
+	if (track_Num >= 255)
+	{
+		track_Num = 0;
+	}
+
+	else track_Num += 1;
+}
+
+// Hard-coded Johnson Counter (SW: 1000)
+void johnsonCounter (int *outputLED) {
+
+		switch(*outputLED) {
+		case 0:
+			track_Num = 128;
+		break;
+
+		case 128:
+			track_Num = 192;
+		break;
+
+		case 192:
+			track_Num = 224;
+		break;
+
+		case 224:
+			track_Num = 240;
+		break;
+
+		case 240:
+			track_Num = 248;
+		break;
+
+		case 248:
+			track_Num = 252;
+		break;
+
+		case 252:
+			track_Num = 254;
+		break;
+
+		case 254:
+			track_Num = 255;
+		break;
+
+		case 255:
+			track_Num = 127;
+		break;
+
+		case 127:
+			track_Num = 63;
+		break;
+
+		case 63:
+			track_Num = 31;
+		break;
+
+		case 31:
+			track_Num = 15;
+		break;
+
+		case 15:
+			track_Num = 7;
+		break;
+
+		case 7:
+			track_Num = 3;
+		break;
+
+		case 3:
+			track_Num = 1;
+		break;
+
+		case 1:
+			track_Num = 0;
+		break;
+
+		default:
+			track_Num = 0;
+		}
+		*outputLED = track_Num;
+	}
+
+void displayLED () {
+   XGpio Gpio;
+   volatile int DELAY;
+
+   int NUM_1 = 0;
+   int NUM_2 = 1;
+
+   // Initializing switch and LED values
+   int LED_VALUE = INITIAL_LED;
+   int SWITCH_DATA = 0;
+
+   XGpio_Initialize(&Gpio, XPAR_AXI_GPIO_0_DEVICE_ID);	// Initialize GPIO variable
+
+   XGpio_SetDataDirection(&Gpio, PORT_LED, 0x0);		// Set first channel tristate buffer to GPIO
+   XGpio_SetDataDirection(&Gpio, PORT_SW, 0xF);			// Set second channel tristate buffer to GPIO
+
+   while(1) {
+      SWITCH_DATA = XGpio_DiscreteRead(&Gpio, PORT_SW); // Getting switch data
+      switch (SWITCH_DATA) {
+      	  case 0:
+      		  xil_printf("Showing 10101010 Pattern\n");
+      		  LED_VALUE = 170; // Show pattern of 10101010 at the start
+      	  break;
+
+      	  case 1:
+      		  xil_printf("All LEDs are ON\n");
+      		  ledsOn(&LED_VALUE);
+      	  break;
+
+      	  case 2:
+      		  xil_printf("All LEDs are OFF\n");
+      		  ledsOff(&LED_VALUE);
+      	  break;
+
+      	  case 3:
+      		  xil_printf("Binary Counter is active\n");
+      		  binaryCounter(&LED_VALUE);
+      	  break;
+
+      	  case 4:
+      		  xil_printf("Ring Counter is active\n");
+      		  ringCounter(&LED_VALUE);
+          break;
+
+      	  case 5:
+      		  xil_printf("Fibonacci Counter is active\n");
+      		  fibonacciCounter(&LED_VALUE, &NUM_1, &NUM_2);
+      	  break;
+
+      	  case 6:
+      		  xil_printf("Switching between all LEDs ON and OFF\n");
+      		  ledsOnOff(&LED_VALUE);
+      	  break;
+
+      	  case 7:
+      		  xil_printf("Gray Counter is active\n");
+      		  grayCounter(&LED_VALUE);
+      	  break;
+
+      	  case 8:
+      		  xil_printf("Johnson Counter is active\n");
+      		johnsonCounter(&LED_VALUE);
+      	  break;
+
+      	  default:
+      		  xil_printf("Invalid Switch Input\n");
+      		  ledsOff(&LED_VALUE); // All LEDS turn off when case # > 8
+      }
+
+      // Setting LED outputs
+      XGpio_DiscreteWrite(&Gpio, PORT_LED, LED_VALUE);
+
+      // Delay for when LED is flashing
+      for (DELAY = 0; DELAY < led_Delay; DELAY++);
+   	  }
+}
+
+int main() {
+
+	displayLED();
+	return 0;
+}

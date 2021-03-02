@@ -1,0 +1,238 @@
+23:26:05 **** Incremental Build of configuration Debug for project 520_lab1_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+23:26:54 **** Auto Build of configuration Debug for project 520_lab1_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../520_lab1_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: 520_lab1_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../520_lab1_app_bsp/ps7_cortexa9_0/lib -o "520_lab1_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: 520_lab1_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size 520_lab1_app.elf  |tee "520_lab1_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25340	   1168	  22584	  49092	   bfc4	520_lab1_app.elf
+'Finished building: 520_lab1_app.elf.size'
+' '
+23:27:01 **** Auto Build of configuration Debug for project 520_lab1_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../520_lab1_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: 520_lab1_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../520_lab1_app_bsp/ps7_cortexa9_0/lib -o "520_lab1_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: 520_lab1_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size 520_lab1_app.elf  |tee "520_lab1_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25340	   1168	  22584	  49092	   bfc4	520_lab1_app.elf
+'Finished building: 520_lab1_app.elf.size'
+' '
+02:05:33 **** Auto Build of configuration Debug for project 520_lab1_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../520_lab1_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: 520_lab1_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../520_lab1_app_bsp/ps7_cortexa9_0/lib -o "520_lab1_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: 520_lab1_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size 520_lab1_app.elf  |tee "520_lab1_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25340	   1168	  22584	  49092	   bfc4	520_lab1_app.elf
+'Finished building: 520_lab1_app.elf.size'
+' '
+02:05:48 **** Incremental Build of configuration Debug for project 520_lab1_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+02:06:32 **** Auto Build of configuration Debug for project 520_lab1_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../520_lab1_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: 520_lab1_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../520_lab1_app_bsp/ps7_cortexa9_0/lib -o "520_lab1_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: 520_lab1_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size 520_lab1_app.elf  |tee "520_lab1_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25340	   1168	  22584	  49092	   bfc4	520_lab1_app.elf
+'Finished building: 520_lab1_app.elf.size'
+' '
+02:06:49 **** Incremental Build of configuration Debug for project 520_lab1_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+23:13:13 **** Auto Build of configuration Debug for project 520_lab1_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../520_lab1_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:31:2: warning: implicit declaration of function 'displayLED' [-Wimplicit-function-declaration]
+  displayLED();
+  ^~~~~~~~~~
+../src/helloworld.c: At top level:
+../src/helloworld.c:37:6: error: conflicting types for 'ledsOn'
+ void ledsOn (int *outputLED) {
+      ^~~~~~
+../src/helloworld.c:23:6: note: previous declaration of 'ledsOn' was here
+ void ledsOn(int);
+      ^~~~~~
+../src/helloworld.c:42:6: error: conflicting types for 'ledsOff'
+ void ledsOff (int *outputLED) {
+      ^~~~~~~
+../src/helloworld.c:24:6: note: previous declaration of 'ledsOff' was here
+ void ledsOff(int);
+      ^~~~~~~
+../src/helloworld.c:47:6: error: conflicting types for 'binaryCounter'
+ void binaryCounter (int *outputLED) {
+      ^~~~~~~~~~~~~
+../src/helloworld.c:25:6: note: previous declaration of 'binaryCounter' was here
+ void binaryCounter(int);
+      ^~~~~~~~~~~~~
+../src/helloworld.c:58:6: error: conflicting types for 'ringCounter'
+ void ringCounter (int *outputLED) {
+      ^~~~~~~~~~~
+../src/helloworld.c:26:6: note: previous declaration of 'ringCounter' was here
+ void ringCounter(int);
+      ^~~~~~~~~~~
+../src/helloworld.c:74:6: error: conflicting types for 'fibonacciCounter'
+ void fibonacciCounter (int *outputLED, int *NUM_1, int *NUM_2) {
+      ^~~~~~~~~~~~~~~~
+../src/helloworld.c:27:6: note: previous declaration of 'fibonacciCounter' was here
+ void fibonacciCounter(int, int, int);
+      ^~~~~~~~~~~~~~~~
+../src/helloworld.c:189:6: warning: conflicting types for 'displayLED'
+ void displayLED () {
+      ^~~~~~~~~~
+../src/helloworld.c:31:2: note: previous implicit declaration of 'displayLED' was here
+  displayLED();
+  ^~~~~~~~~~
+make: *** [src/helloworld.o] Error 1
+23:13:23 **** Auto Build of configuration Debug for project 520_lab1_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../520_lab1_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:31:2: warning: implicit declaration of function 'displayLED' [-Wimplicit-function-declaration]
+  displayLED();
+  ^~~~~~~~~~
+../src/helloworld.c: At top level:
+../src/helloworld.c:42:6: error: conflicting types for 'ledsOff'
+ void ledsOff (int *outputLED) {
+      ^~~~~~~
+../src/helloworld.c:24:6: note: previous declaration of 'ledsOff' was here
+ void ledsOff(int);
+      ^~~~~~~
+../src/helloworld.c:47:6: error: conflicting types for 'binaryCounter'
+ void binaryCounter (int *outputLED) {
+      ^~~~~~~~~~~~~
+../src/helloworld.c:25:6: note: previous declaration of 'binaryCounter' was here
+ void binaryCounter(int);
+      ^~~~~~~~~~~~~
+../src/helloworld.c:58:6: error: conflicting types for 'ringCounter'
+ void ringCounter (int *outputLED) {
+      ^~~~~~~~~~~
+../src/helloworld.c:26:6: note: previous declaration of 'ringCounter' was here
+ void ringCounter(int);
+      ^~~~~~~~~~~
+../src/helloworld.c:74:6: error: conflicting types for 'fibonacciCounter'
+ void fibonacciCounter (int *outputLED, int *NUM_1, int *NUM_2) {
+      ^~~~~~~~~~~~~~~~
+../src/helloworld.c:27:6: note: previous declaration of 'fibonacciCounter' was here
+ void fibonacciCounter(int, int, int);
+      ^~~~~~~~~~~~~~~~
+../src/helloworld.c:189:6: warning: conflicting types for 'displayLED'
+ void displayLED () {
+      ^~~~~~~~~~
+../src/helloworld.c:31:2: note: previous implicit declaration of 'displayLED' was here
+  displayLED();
+  ^~~~~~~~~~
+make: *** [src/helloworld.o] Error 1
+23:14:16 **** Auto Build of configuration Debug for project 520_lab1_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../520_lab1_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:34:2: warning: implicit declaration of function 'displayLED' [-Wimplicit-function-declaration]
+  displayLED();
+  ^~~~~~~~~~
+../src/helloworld.c: At top level:
+../src/helloworld.c:192:6: warning: conflicting types for 'displayLED'
+ void displayLED () {
+      ^~~~~~~~~~
+../src/helloworld.c:34:2: note: previous implicit declaration of 'displayLED' was here
+  displayLED();
+  ^~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: 520_lab1_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../520_lab1_app_bsp/ps7_cortexa9_0/lib -o "520_lab1_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: 520_lab1_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size 520_lab1_app.elf  |tee "520_lab1_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25340	   1168	  22584	  49092	   bfc4	520_lab1_app.elf
+'Finished building: 520_lab1_app.elf.size'
+' '
+23:14:32 **** Auto Build of configuration Debug for project 520_lab1_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../520_lab1_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: 520_lab1_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../520_lab1_app_bsp/ps7_cortexa9_0/lib -o "520_lab1_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: 520_lab1_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size 520_lab1_app.elf  |tee "520_lab1_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25340	   1168	  22584	  49092	   bfc4	520_lab1_app.elf
+'Finished building: 520_lab1_app.elf.size'
+' '
